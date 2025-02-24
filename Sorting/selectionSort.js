@@ -1,14 +1,16 @@
-let arr = [13, 46, 24, 52, 20, 9, 45, 23, 12, 33];
+let arr = [13, 12, 4, 2, 11, 9];
 
 function selectionSort(arr) {
   for (let i = 0; i < arr.length - 1; i++) {
-    let temp = arr[i];
+    let min = i;
     for (let j = i + 1; j < arr.length; j++) {
-      if (arr[i] > arr[j]) {
-        arr[i] = arr[j];
-        arr[j] = temp;
+      if (arr[j] < arr[min]) {
+        min = j;
       }
     }
+    let temp = arr[min];
+    arr[min] = arr[i];
+    arr[i] = temp;
   }
   return arr;
 }

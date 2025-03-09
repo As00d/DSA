@@ -1,4 +1,4 @@
 # Stepper Project
 
-![Project Image](/assets/Stepper.png "Stepper")
+![Project Image](./src/assets/Stepper.png "Stepper")
 

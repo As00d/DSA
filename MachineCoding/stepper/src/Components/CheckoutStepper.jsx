@@ -6,14 +6,17 @@ function CheckoutStepper() {
 
   function increaseStep() {
     if (step < 4) setStep(step + 1);
-    console.log(step);
   }
   return (
     <div>
       <div className="flex justify-center">
         {data.map((buttonData) => {
           return (
-            <Button buttonData={buttonData} key={buttonData.step} step={step} />
+            <Button
+              buttonData={buttonData}
+              key={buttonData.index}
+              step={step}
+            />
           );
         })}
       </div>
@@ -28,7 +31,7 @@ function CheckoutStepper() {
             className=" py-3 px-4 rounded-xl bg-blue-400 text-white"
             onClick={increaseStep}
           >
-            {step == 3 ? "Finish" : "Next"}
+            {step === 3 ? "Finish" : "Next"}
           </button>
         )}
       </div>

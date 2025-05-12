@@ -28,3 +28,6 @@ console.log(friends.indexOf("namya"));
 const isAnkiAFriend = friends.includes("anki");
 
 console.log(isAnkiAFriend);
+
+// JS engine - Javascript runtime environment
+// So there are 3 steps involved

@@ -1,9 +1,9 @@
-import LoginForm from "./Components/loginForm";
+import ChipsInput from "./chips_input/ChipsInput";
 
 function App() {
   return (
     <main>
-      <LoginForm />
+      <ChipsInput />
     </main>
   );
 }

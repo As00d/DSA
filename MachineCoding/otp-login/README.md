@@ -1,2 +1,0 @@
-# OTP login Project
-

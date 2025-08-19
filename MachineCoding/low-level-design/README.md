@@ -5,3 +5,19 @@ https://github.com/user-attachments/assets/3feeb48b-21af-4ca7-89b5-4d58893c331d
 # Leap year checker
 
 https://github.com/user-attachments/assets/bfaf7e40-c18e-46c5-b879-84f9037a7969
+
+# Password checker
+
+https://github.com/user-attachments/assets/78a20d99-7212-48ff-a78a-20a5ff39d944
+
+# Copy to clipboard
+
+Lesson - To add a copy functionality we need to use
+
+```
+        navigator.clipboard
+            .writeText(value)
+            .then(() => setSuccess("✓ Copied!"))
+            .catch(() => setError("Type some values to copy"));
+
+```

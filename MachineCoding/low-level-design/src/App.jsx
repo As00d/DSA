@@ -4,11 +4,7 @@ import LeapYear from "./leap_year/LeapYear";
 import Password from "./password_checker/Password";
 
 function App() {
-  return (
-    <main>
-      <Password />
-    </main>
-  );
+  return <main></main>;
 }
 
 export default App;

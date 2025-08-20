@@ -1,9 +1,9 @@
-import Counter from "./Counter/Counter";
+import TodoList from "./to_do_list/ToDoList";
 
 function App() {
   return (
     <main>
-      <Counter />
+      <TodoList />
     </main>
   );
 }

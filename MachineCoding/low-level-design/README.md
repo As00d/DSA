@@ -21,3 +21,7 @@ Lesson - To add a copy functionality we need to use
             .catch(() => setError("Type some values to copy"));
 
 ```
+
+# Counter using React
+
+https://github.com/user-attachments/assets/2b722e9f-6f7b-44fc-b285-889b4ead3a20

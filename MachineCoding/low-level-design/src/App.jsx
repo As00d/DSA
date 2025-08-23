@@ -1,9 +1,9 @@
-import TodoList from "./to_do_list/ToDoList";
+import FaqAccordion from "./frequently_asked_question/FaqAccordion";
 
 function App() {
   return (
     <main>
-      <TodoList />
+      <FaqAccordion />
     </main>
   );
 }

@@ -1,9 +1,9 @@
-import FaqAccordion from "./frequently_asked_question/FaqAccordion";
+import DarkModeToggle from "./dark_mode/DarkModeToggle";
 
 function App() {
   return (
     <main>
-      <FaqAccordion />
+      <DarkModeToggle />
     </main>
   );
 }

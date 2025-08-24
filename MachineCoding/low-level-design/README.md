@@ -33,3 +33,7 @@ https://github.com/user-attachments/assets/c36187c0-e208-4ae6-8206-755be8345190
 # Frequently asked question (accordion)
 
 https://github.com/user-attachments/assets/544d9e01-94ed-4104-b48c-eaf8618ac5fa
+
+# Dark and Light mode
+
+https://github.com/user-attachments/assets/50fa11e3-9c95-4bfb-a38b-84e8bf4de8a4

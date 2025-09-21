@@ -1,10 +1,9 @@
-import DarkModeToggle from "./dark_mode/DarkModeToggle";
-import EvenOrOddChecker from "./odd_or_even/EvenOrOddChecker";
+import ReadMoreToggle from "./read-more/ReadMoreToggle";
 
 function App() {
   return (
     <main>
-      <EvenOrOddChecker />
+      <ReadMoreToggle />
     </main>
   );
 }

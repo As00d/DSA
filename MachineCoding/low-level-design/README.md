@@ -37,3 +37,7 @@ https://github.com/user-attachments/assets/544d9e01-94ed-4104-b48c-eaf8618ac5fa
 # Dark and Light mode
 
 https://github.com/user-attachments/assets/50fa11e3-9c95-4bfb-a38b-84e8bf4de8a4
+
+# Is Number Even Or Odd
+
+https://github.com/user-attachments/assets/8ecd5933-2701-46cb-8b55-66fabce50208

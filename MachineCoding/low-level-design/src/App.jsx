@@ -1,4 +1,4 @@
-import GuessTheNumber from "./guessTheNumber/GuessTheNumber";
+import ContactForm from "./contact_form/ContactForm";
 export default function App() {
-  return <GuessTheNumber />;
+  return <ContactForm />;
 }

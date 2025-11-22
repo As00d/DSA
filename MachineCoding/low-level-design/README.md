@@ -53,3 +53,7 @@ https://github.com/user-attachments/assets/1ad2b405-8684-47e2-bcfc-310b3bcdd9ad
 # Contact form
 
 https://github.com/user-attachments/assets/cd1480b3-93c6-431a-89bd-7f9c35d28341
+
+# Color Explorer
+
+https://github.com/user-attachments/assets/d4b62ea3-939b-49dc-bd57-fe5ebcd2981a

@@ -57,3 +57,7 @@ https://github.com/user-attachments/assets/cd1480b3-93c6-431a-89bd-7f9c35d28341
 # Color Explorer
 
 https://github.com/user-attachments/assets/d4b62ea3-939b-49dc-bd57-fe5ebcd2981a
+
+# Character Count
+
+https://github.com/user-attachments/assets/929cf71f-95a5-4119-9b85-fa4a98643ece

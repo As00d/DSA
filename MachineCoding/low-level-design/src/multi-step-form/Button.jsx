@@ -1,6 +1,6 @@
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-const Button = ({ currentStep, handleNext, handlePrev }) => {
+const Button = ({ currentStep, handleNext, handlePrev, handleFormSubmit }) => {
   return (
     <div className="btn-container">
       <button
@@ -19,22 +19,28 @@ const Button = ({ currentStep, handleNext, handlePrev }) => {
         <FaChevronLeft />
         <p>Previous</p>
       </button>
-      <button
-        className="btn"
-        onClick={handleNext}
-        style={
-          currentStep == 2
-            ? {
-                background: "white",
-                color: "grey",
-                border: "1px solid grey",
-              }
-            : {}
-        }
-      >
-        <p>Next</p>
-        <FaChevronRight />
-      </button>
+      {currentStep != 2 ? (
+        <button
+          className="btn"
+          onClick={handleNext}
+          style={
+            currentStep == 2
+              ? {
+                  background: "white",
+                  color: "grey",
+                  border: "1px solid grey",
+                }
+              : {}
+          }
+        >
+          <p>Next</p>
+          <FaChevronRight />
+        </button>
+      ) : (
+        <button className="btn" onClick={handleFormSubmit}>
+          Submit
+        </button>
+      )}
     </div>
   );
 };

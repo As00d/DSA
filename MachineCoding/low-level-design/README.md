@@ -65,3 +65,7 @@ https://github.com/user-attachments/assets/929cf71f-95a5-4119-9b85-fa4a98643ece
 # Mortgage Calculator
 
 https://github.com/user-attachments/assets/f0b8f928-a36f-4ab1-a279-99e4585c9049
+
+# Toggle Password
+
+https://github.com/user-attachments/assets/c9e1ed2f-0d5a-4e5e-85f2-219d505ccb18

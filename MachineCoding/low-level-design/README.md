@@ -73,3 +73,7 @@ https://github.com/user-attachments/assets/c9e1ed2f-0d5a-4e5e-85f2-219d505ccb18
 ## Toast Notification
 
 https://github.com/user-attachments/assets/edd06e2f-4344-4537-b96a-81942e57db2b
+
+## Tab Switcher
+
+https://github.com/user-attachments/assets/0210da1a-f471-4d5b-884f-d9e713d10e00

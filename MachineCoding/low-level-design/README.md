@@ -81,3 +81,7 @@ https://github.com/user-attachments/assets/0210da1a-f471-4d5b-884f-d9e713d10e00
 ## Accordion
 
 https://github.com/user-attachments/assets/69b0543f-7d6a-440d-a545-92e8f6763559
+
+## Sidebar
+
+https://github.com/user-attachments/assets/a2ebf994-e01d-4f82-ad0f-862e15ba9b40

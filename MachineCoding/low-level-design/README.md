@@ -77,3 +77,7 @@ https://github.com/user-attachments/assets/edd06e2f-4344-4537-b96a-81942e57db2b
 ## Tab Switcher
 
 https://github.com/user-attachments/assets/0210da1a-f471-4d5b-884f-d9e713d10e00
+
+## Accordion
+
+https://github.com/user-attachments/assets/69b0543f-7d6a-440d-a545-92e8f6763559

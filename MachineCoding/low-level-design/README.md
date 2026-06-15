@@ -85,3 +85,7 @@ https://github.com/user-attachments/assets/69b0543f-7d6a-440d-a545-92e8f6763559
 ## Sidebar
 
 https://github.com/user-attachments/assets/a2ebf994-e01d-4f82-ad0f-862e15ba9b40
+
+## Notification Bell
+
+https://github.com/user-attachments/assets/bf9ab961-d706-42ce-98a4-e4dd59d5ef1d

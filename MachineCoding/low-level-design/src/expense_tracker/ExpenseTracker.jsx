@@ -1,133 +1,140 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "./styles.css";
 
 const ExpenseTracker = () => {
-  const [isOpenForm, setIsOpenForm] = useState(false);
+  const [transactions, setTransactions] = useState([]);
+  const [type, setType] = useState("income");
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState("");
-  const [isIncomeORExpense, setIsIncomeORExpense] = useState("Income");
-  const [itemList, setItemList] = useState([]);
+  const [showForm, setShowForm] = useState(false);
   const [search, setSearch] = useState("");
 
-  const filteredItems = itemList.filter((item) =>
-    item.title.toLowerCase().includes(search.toLowerCase())
+  const filteredTransactions = transactions.filter((t) =>
+    t.title.toLowerCase().includes(search.toLowerCase())
   );
 
-  const handleTransaction = (e) => {
-    e.preventDefault();
-    if (!title || !amount || !isIncomeORExpense) {
-      return;
-    }
+  const totalIncome = transactions
+    .filter((t) => t.type === "income")
+    .reduce((acc, curr) => acc + curr.amount, 0);
 
-    const information = {
-      title: title,
-      amount: amount,
-      isIncomeORExpense: isIncomeORExpense,
-      id: Date.now() + Math.random(),
+  const totalExpense = transactions
+    .filter((t) => t.type === "expense")
+    .reduce((acc, curr) => acc + curr.amount, 0);
+
+  const balance = totalIncome - totalExpense;
+
+  const handleAddTransaction = () => {
+    if (!title || !amount) return;
+    const newTransaction = {
+      id: Date.now(),
+      title,
+      amount: Number(amount),
+      type,
     };
+    setTransactions([...transactions, newTransaction]);
     setTitle("");
     setAmount("");
-    setIsIncomeORExpense("Income");
-    setItemList((prev) => [...prev, information]);
+    setType("income");
+    setShowForm(false);
   };
 
-  const handleRemove = (id) => {
-    setItemList((prev) => prev.filter((item) => item.id !== id));
+  const handleDelete = (id) => {
+    const updated = transactions.filter((t) => t.id !== id);
+    setTransactions(updated);
   };
-
-  const income = itemList
-    .filter((item) => item.isIncomeORExpense === "Income")
-    .map((item) => item.amount)
-    .reduce(
-      (accumulator, currentValue) => Number(accumulator) + Number(currentValue),
-      0
-    );
-  const expense = itemList
-    .filter((item) => item.isIncomeORExpense === "Expense")
-    .map((item) => item.amount)
-    .reduce(
-      (accumulator, currentValue) => Number(accumulator) + Number(currentValue),
-      0
-    );
-  const balance = income - expense;
 
   return (
     <div className="container">
       <div className="expense-container">
         <h2 className="header">Expense Tracker</h2>
+
         <div className="balance-form">
-          <h2 data-testid="balance-amount">Balance: ₹{balance}</h2>
+          <h3 data-testid="balance-amount">Balance: ₹{balance}</h3>
           <button
-            onClick={() => setIsOpenForm(!isOpenForm)}
             data-testid="toggle-form-button"
+            onClick={() => setShowForm(!showForm)}
           >
-            {isOpenForm ? "Close Form" : "Open Form"}
+            {showForm ? "Close Form" : "Open Form"}
           </button>
         </div>
-        {isOpenForm && (
-          <form>
+
+        {showForm && (
+          <div>
             <input
               type="text"
+              data-testid="title-input"
               placeholder="Title"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              data-testid="title-input"
             />
             <input
               type="number"
+              data-testid="amount-input"
               placeholder="Amount"
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
-              data-testid="amount-input"
-              min={0}
+              onKeyDown={(e) => {
+                if (e.key === "-" || e.key === "+") {
+                  e.preventDefault();
+                }
+              }}
+              min="0"
             />
             <select
-              value={isIncomeORExpense}
-              onChange={(e) => setIsIncomeORExpense(e.target.value)}
+              value={type}
+              onChange={(e) => setType(e.target.value)}
               data-testid="type-select"
             >
-              <option value="Income">Income</option>
-              <option value="Expense">Expense</option>
+              <option value="income">Income</option>
+              <option value="expense">Expense</option>
             </select>
             <button
-              type="button"
               className="transact-btn"
-              onClick={(e) => handleTransaction(e)}
               data-testid="add-button"
+              onClick={handleAddTransaction}
             >
               Add Transaction
             </button>
-          </form>
+          </div>
         )}
+
         <div className="balance-form">
-          <h2 data-testid="income-amount">Income: ₹{income}</h2>
-          <h2 data-testid="expenses-amount">Expense: ₹{expense}</h2>
+          <div data-testid="income-amount">Income: ₹{totalIncome}</div>
+          <div data-testid="expenses-amount">Expense: ₹{totalExpense}</div>
         </div>
+
         <input
           type="text"
+          data-testid="search-input"
           placeholder="Search....."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          data-testid="search-input"
         />
-        {filteredItems.length > 0 ? (
-          filteredItems.map((item) => (
-            <div className="transaction" key={item.id}>
-              <p data-testid="transaction-item">
-                {item.title}: ₹{item.amount}
-              </p>
+
+        <ul style={{ listStyle: "none", padding: 0 }}>
+          {filteredTransactions.map((t) => (
+            <li
+              key={t.id}
+              className="transaction"
+              data-testid="transaction-item"
+            >
+              <span>
+                {t.title}: ₹{t.amount}
+              </span>
               <button
                 className="remove"
-                onClick={() => handleRemove(item.id)}
                 data-testid="delete-button"
+                onClick={() => handleDelete(t.id)}
               >
                 Remove
               </button>
-            </div>
-          ))
-        ) : (
-          <div className="transaction-div">
-            <p data-testid="no-transactions">No transactions found</p>
+            </li>
+          ))}
+        </ul>
+
+        {filteredTransactions.length === 0 && (
+          <div className="transaction-div" data-testid="no-transactions">
+            <p>No transactions found</p>
           </div>
         )}
       </div>

@@ -97,3 +97,7 @@ https://github.com/user-attachments/assets/c487f58b-271e-4527-a347-56165b4d96a0
 ## Image Gallery
 
 https://github.com/user-attachments/assets/a1e99e66-ce26-4b39-b40c-00252f8afcdd
+
+## Expense Tracker
+
+https://github.com/user-attachments/assets/254de96d-8514-48c5-b7b4-c51d4d57a2ba
